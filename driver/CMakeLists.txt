@@ -80,7 +80,7 @@ target_link_libraries(red-o-lator-icd PRIVATE
         red-o-lator-common
         PkgConfig::LIB_CLRX_AMD_ASM
         )
-target_include_directories(red-o-lator-icd PRIVATE src/runtime)
+target_include_directories(red-o-lator-icd PUBLIC src/runtime)
 install(TARGETS red-o-lator-icd DESTINATION lib)
 
 
@@ -138,7 +138,7 @@ set(E2E_TEST_SOURCES
         )
 
 add_executable(red-o-lator-icd-test-e2e ${E2E_TEST_SOURCES})
-target_link_libraries(red-o-lator-icd-test-e2e PRIVATE OpenCL::OpenCL red-o-lator-common)
+target_link_libraries(red-o-lator-icd-test-e2e PRIVATE OpenCL::OpenCL red-o-lator-common red-o-lator-icd)
 add_custom_command(TARGET red-o-lator-icd-test-e2e POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${TEST_RESOURCES}

@@ -1,8 +1,8 @@
 #include <string>
-#include <iostream>
 #include <vector>
 
-#include <CL/opencl.h>
+#include "runtime/icd/icd.h"
+#include <common/cl.h>
 #include <common/test/doctest.h>
 #include <common/utils/common.hpp>
 

@@ -1,4 +1,4 @@
-#include <CL/opencl.h>
+#include <common/cl.h>
 #include <common/logger/Logger.h>
 #include <common/utils/common.hpp>
 #include <cstddef>
